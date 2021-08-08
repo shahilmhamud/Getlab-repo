@@ -1,0 +1,747 @@
+body{
+    margin: 0px;
+}
+#main{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows:170px 730px 350px 350px 500px 60px;
+
+}
+#main img{
+    position: absolute;
+    height: 950px;
+    width: 100%;
+}
+.child1{
+    background-color: red;
+    position: relative;
+    grid-column: 1/span2;
+    display: grid;
+    grid-template-columns:repeat(1,1fr) ;
+    grid-template-rows:60px 110px;
+    
+    
+}
+.head{
+   background-color: rgb(255, 246, 246);
+   position: relative;
+}
+.font{
+    width: 30px;
+    position: relative;
+    display: inline-block;
+    left: 85%;
+    top: 25%;
+
+}
+.font i{
+    color: #f53f48;
+    font-size: 15px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+.font span{
+    
+    color: white;
+    background: black;
+    width: 50px;
+    border: 1px black solid;
+    border-radius: 5px;
+    padding: 2px 0;
+    text-align: center;
+    display: block;
+    margin: 0px auto;
+    visibility: hidden;
+    transition-duration: .5s;
+    transition-property: visibility;
+    position: absolute;
+
+}
+
+.font:hover>span{
+    visibility: visible;
+}
+.op{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.op ul{
+    float: left;
+    position: relative;
+    right: 15px;
+    top: -17px;
+    list-style: none;
+    
+}
+.op ul li{
+    padding: 10px;
+    color: rgb(59, 49, 51);
+    display: inline;
+}
+.op ul li i{
+    font-size: 10px;
+}
+.op ul li span{
+    font-size: 10px;
+}
+.nav{
+    background-color:#f53f48;
+    position:relative;
+}
+.name p{
+    font-family: 'Noto Serif', serif;
+    color: rgb(255, 250, 250);
+    font-size: 40px;
+    position: relative;
+    left: 60px;
+    top: -10px;
+}
+.link{width: 600px;
+    position: absolute;
+    top: 25px;
+    left: 60%;
+    
+    
+}
+.link ul{
+    list-style: none;
+}
+.link ul li{
+    display: inline;
+    padding: 20px;
+}
+.link ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    transition: .5s color;
+}
+.link ul li a:hover{
+    color:rgb(158, 0, 0);
+}
+.child3{
+    background-color: rgba(31, 21, 21, .1);
+    position: relative;
+    grid-column: 1/span2;
+    
+}
+.para h1{
+    font-family:;
+    text-align: center;
+    font-size: 60px;
+    color: white;
+    position: relative;
+    top: 120px;
+}
+.para p{
+    text-align: center;
+    position: relative;
+    top: 110px;
+    color: #fff4f4;
+    font-size: 20px;
+}
+.box1 p{
+    
+    width: 150px;
+    border: 1px white solid;
+    padding: 10px;
+    background-color: transparent;
+    position: absolute;
+    top:350px;
+    left: 500px;
+    text-align: center;
+    color: white;
+    transition: .5s  background-color,border ;
+}
+.box1 p:hover{
+    background-color: #f53f48;
+    border: 0px solid;
+}
+.box2 p{
+    width: 150px;
+    border: 1px white solid;
+    background-color: transparent;
+    padding: 10px;
+    position: absolute;
+    top:350px;
+    left: 700px;
+    text-align: center;
+    color: white;
+    transition: .5s  background-color,border ;
+}
+.box2 p:hover{
+    background-color: #f53f48;
+    border: 0px solid;
+}
+.child4{
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 348px;
+    height: 284px;
+    top: -50px;
+    left: 100px;
+    transition: .5s all;
+    box-shadow: 1px 1px 5px .5px rgba(0, 0, 0, 0.37);
+}
+.child4:hover{
+    background-color: black;
+}
+.child4:hover > a > .ic{
+    background-color: #f53f48;
+    border:1px rgba(0, 0, 0, 0) solid;
+    
+}
+.child4:hover > a > .ic > i{
+    color: rgb(255, 245, 245);
+}
+.child4:hover > h1{
+    color: white;
+}
+.child4:hover > h1::after{
+    background-color: rgb(255, 30, 30);
+}
+.child4:hover > p{
+    color: rgb(255, 253, 253);
+}
+.ic{
+    position: absolute;
+    top: 25px;
+    left: 140px;
+    background: rgb(255, 250, 250);
+    width: 45px;
+    height: 45px;
+    border: 1px rgba(90, 83, 83, 0.418) solid;
+    border-radius:50%;
+    transition: 1s all;
+}
+.ic i{
+    font-size:15px ;
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    transition: 1s all .4s;
+    color:#f53f48;
+
+}
+.child4 h1{
+    font-size: 18px;
+    position: absolute;
+    top: 85px;
+    left:45px ;
+    color: var(--main-color);
+    transition: 1s all .2s;
+}
+.child4 h1::after{
+    content: '';
+    width: 70px;
+    height: 5px;
+    background-color: rgb(122, 15, 15);
+    position: absolute;
+    top: 30px;
+    left: 85px;
+    border-radius: 15px;
+    transition: 1s all;
+}
+.child4 p{
+    font-size: 17px;
+    position: absolute;
+    top: 125px;
+    left: 30px;
+    white-space: pre;
+    color: var(--main-color);
+    transition: 1s all .2s;
+
+}
+.child5{
+    position: relative;
+    background: rgb(12, 0, 0);
+    width: 348px;
+    height: 284px;
+    top: -50px;
+    left: 50px;
+    box-shadow: 1px 1px 5px .5px rgba(0, 0, 0, 0.37);
+}
+.ic2{
+    position: absolute;
+    top: 25px;
+    left: 140px;
+    background:#f53f48;
+    width: 45px;
+    height: 45px;
+    border: 1px rgba(90, 83, 83, 0.418) solid;
+    border-radius:50%;
+}
+.ic2 i{
+    font-size:15px ;
+    position: absolute;
+    top: 13px;
+    left: 17px;
+    color: #ffffff;
+}
+.child5 h1{
+    font-size: 18px;
+    position: absolute;
+    top: 85px;
+    left:70px ;
+    color: #fff;
+}
+.child5 h1::after{
+    content: '';
+    width: 55px;
+    height: 5px;
+    background-color: rgb(255, 0, 0);
+    position: absolute;
+    top: 30px;
+    left: 69px;
+    border-radius: 15px;
+}
+.child5 p{
+    font-size: 17px;
+    position: absolute;
+    top: 125px;
+    left: 40px;
+    white-space: pre;
+    color: white;
+}
+.child6{
+    position: relative;
+    background: rgb(255, 255, 255);
+    width: 348px;
+    height: 284px;
+    top: -50px;
+    left: 0px;
+    transition: .5s all;
+    box-shadow: 1px 1px 5px .5px rgba(0, 0, 0, 0.37);
+}
+.child6:hover{
+    background-color: black;
+}
+.child6:hover > a > .ic3{
+    background-color:#f53f48;
+    border:1px rgba(0, 0, 0, 0) solid;
+    
+}
+.child6:hover > a > .ic3 > i{
+    color: rgb(255, 245, 245);
+}
+.child6:hover > h1{
+    color: white;
+}
+.child6:hover > h1::after{
+    background-color: rgb(255, 30, 30);
+}
+.child6:hover > p{
+    color: rgb(255, 253, 253);
+}
+.ic3{
+    position: absolute;
+    top: 25px;
+    left: 140px;
+    background: rgb(255, 250, 250);
+    width: 45px;
+    height: 45px;
+    border: 1px rgba(90, 83, 83, 0.418) solid;
+    border-radius:50%;
+    transition: 1s all;
+
+}
+.ic3 i{
+    font-size:15px ;
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    transition: 1s all .4s;
+    color: #ff5533;
+}
+.child6 h1{
+    font-size: 18px;
+    position: absolute;
+    top: 85px;
+    left:50px ;
+    color: var(--main-color);
+    transition: 1s all .2s;
+}
+.child6 h1::after{
+    content: '';
+    width: 70px;
+    height: 5px;
+    background-color: rgb(122, 15, 15);
+    position: absolute;
+    top: 30px;
+    left: 85px;
+    border-radius: 15px;
+    transition: 1s all;
+}
+.child6 p{
+    font-size: 17px;
+    position: absolute;
+    top: 125px;
+    left: 40px;
+    white-space: pre;
+    color: var(--main-color);
+    transition: 1s all .2s;
+
+}
+.child7{
+    background-color: transparent;
+    position: relative;
+
+grid-column: 1/span2;
+display: grid;
+grid-template-columns: repeat(3,1fr);
+grid-row-gap: 5px;
+grid-column-gap: 5px;
+}
+.sub1{
+    position: relative;
+}
+.bike{
+    position: relative;
+}
+.bike i{
+    font-size: 40px;
+    position: absolute ;
+    left: 30px;
+    color:var(--main-color);
+    transition: 1s color;
+}
+.bike h1{
+    font-size: 22px;
+    position: relative;
+    top: 10px;
+    left:90px;
+    color: var(--main-color);
+}
+.bike:hover > i{
+    color:#f53f48 ;
+}
+.p p{
+ width: 350px;
+ position: absolute;
+ left: 30px;
+ color: var(--main-color);
+}
+.sub2{
+    position: relative;
+}
+.news{
+    position: relative;
+}
+.news i{
+    font-size: 40px;
+    position: absolute ;
+    left: 0px;
+    color: var(--main-color);
+    transition: 1s color;
+}
+.news:hover > i{
+    color:#f53f48;
+}
+.news h1{
+    font-size: 22px;
+    position: relative;
+    top: 10px;
+    left:60px;
+    color: var(--main-color);
+}
+.news p{
+    width: 350px;
+    position: absolute;
+ left: 0px;
+ color: var(--main-color);
+}
+.sub3{
+    position: relative;
+   
+}
+.plane i{
+    font-size: 40px;
+    position: absolute ;
+    left: 0px;
+    color: var(--main-color);
+    transition: 1s color;
+}
+.plane:hover > i{
+    color: #ee2c25;
+}
+.plane h1{
+    font-size: 22px;
+    position: relative;
+    top: 10px;
+    left:60px;
+    color: var(--main-color);
+}
+.plane p{
+    width: 350px;
+ left: 0px;
+ color: var(--main-color);
+}
+.sub4{
+    position: relative;
+}
+.eye i{
+    font-size: 40px;
+    position: absolute ;
+    left: 30px;
+    color:var(--main-color);
+    transition: 1s color;
+}
+.eye:hover > i{
+    color:#f53f48 ;
+}
+.eye h1{
+    font-size: 22px;
+    position: relative;
+    top: 10px;
+    left:90px;
+    color: var(--main-color);
+}
+.eye p{
+    width: 350px;
+    position: absolute;
+    left: 30px;
+    color: var(--main-color);
+}
+.sub5{
+    position: relative;
+}
+.leaf i{
+    font-size: 40px;
+    position: absolute ;
+    left: 0px;
+    color:var(--main-color);
+    transition: 1s color;
+}
+.leaf:hover > i{
+    color:#f53f48 ;
+}
+.leaf h1{
+    font-size: 22px;
+    position: relative;
+    top: 10px;
+    left:60px;
+    color: var(--main-color);
+}
+.leaf p{
+    width: 350px;
+    left: 0px;
+    color: var(--main-color);
+}
+.sub6{
+    position: relative;
+}
+.power i{
+    font-size: 40px;
+    position: absolute ;
+    left: 0px;
+    color: var(--main-color);
+    transition: 1s color;
+}
+.power:hover > i{
+    color:#f53f48 ;
+}
+.power h1{
+    font-size: 22px;
+    position: relative;
+    top: 10px;
+    left:60px;
+    color:var(--main-color);
+}
+.power p{
+    width: 350px;
+    left: 0px;
+    color:var(--main-color);
+}
+.child8{
+    position: relative;
+    grid-column: 1/span2;
+    background:#27282e ;
+}
+.first{
+    position: relative;
+    width: 250px;
+    height: 298px;
+    left: 100px;
+    top: 60px;
+    
+}
+.first h1{
+    font-size: 18px;
+    color: white;
+    position: relative;
+    left: 12px;
+}
+
+.f2 i{
+    color:var(--ark-color);
+    font-size: 16px;
+    position: absolute;
+    top: 80px;
+    left: 15px;
+}
+.f2 i::after{
+    content: '';
+    width: 230px;
+    height: 1px;
+    background-color: rgba(255, 0, 0, 0.397);
+    position: absolute;
+    top: 55px;
+    left: -5px;
+    
+}
+.f2 span{
+ color: var(--ark-color);
+ position: absolute;
+ top: 75px;
+ left: 50px;
+ line-height: 23px;
+}
+.f3 i{
+    color:var(--ark-color);
+    font-size: 16px;
+    position: absolute;
+    top: 155px;
+    left: 15px;
+}
+.f3 i::after{
+    content: '';
+    width: 230px;
+    height: 1px;
+    background-color: rgba(255, 0, 0, 0.397);
+    position: absolute;
+    top: 30px;
+    left: -5px;
+    
+}
+.f3 span{
+    color: var(--ark-color);
+ position: absolute;
+ top:150px;
+ left: 50px;
+ line-height: 23px;
+}
+.f4 i{
+    color:var(--ark-color);
+    font-size: 16px;
+    position: absolute;
+    top: 205px;
+    left: 15px;
+}
+.f4 span{
+    color: var(--ark-color);
+ position: absolute;
+ top:200px;
+ left: 50px;
+ line-height: 23px;
+}
+.half ul{
+    list-style: none;
+    
+}
+.half ul li{
+    display: inline;
+    padding: 10px;
+    width: 15px;
+    margin: 5px;
+    background: #000;
+    position: relative;
+    left:70px;
+    transition: .3s all;
+}
+.half li i{
+    color: rgb(90, 88, 88);
+    transition: .4s all .5s ;
+}
+.half li:nth-child(1) i{
+    text-align: center;
+    padding: 5px;
+    
+}
+.half li:nth-child(1):hover{
+    background-color: rgb(40, 51, 206);
+    
+}
+.half li:nth-child(2):hover{
+    background-color: rgb(96, 192, 236);
+    
+}
+.half li:nth-child(3):hover{
+    background-color: rgb(12, 155, 76);
+    
+}
+.half li:nth-child(4):hover{
+    background-color: linear-gradient(to top,red,yellow);
+    
+}
+.half li:nth-child(5):hover{
+    background-color: rgb(111, 113, 134);
+    
+}
+.half li:hover i{
+    color: rgb(255, 234, 234);
+}
+.second{
+    position: relative;
+    left: 450px;
+    top: -300px;
+    width: 300px;
+}
+.second h1{
+    font-size: 18px;
+    color: white;
+    position: absolute;
+    left: 35px;
+    top: -8px;
+}
+.second ul{
+    list-style: none;
+}
+.second li:first-child article{
+    position: absolute;
+    top: 80px;
+    line-height: 22px;
+    font-size: 18px;
+    color: red;
+}
+.second li:first-child p{
+    position: absolute;
+    top: 135px;
+    font-size: 20px;
+    color: var(--ark-color);
+}
+.second li:first-child p::after{
+    content: '';
+    width: 250px;
+    height: 1px;
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.397);
+    left: 0px;
+    top: 40px;
+}
+.second li:last-child article{
+    position: absolute;
+    top: 210px;
+    line-height: 22px;
+    font-size: 18px;
+    color: red;
+}
+.second li:last-child p{
+    position: absolute;
+    top: 280px;
+    font-size:20px ;
+    color: var(--ark-color);
+}
+.child9{
+    background-color:rgb(36, 35, 35);
+    position: relative;
+    grid-column: 1/span2;
+
+}
+.child9 p{
+    text-align: center;
+    color: #dddde0;
+}
+:root{
+    --main-color:#444141;
+    --ark-color:#a5a6aa;
+}
